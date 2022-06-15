@@ -89,7 +89,6 @@ justify-content: space-between;
   border-radius: 50%;
   top: 100px;
   transform: translateX(-550px);
-
 }
 /* Login */
 .box-input label{
@@ -105,4 +104,21 @@ justify-content: space-between;
   width: 100%;
   box-sizing: border-box;
   border: none;
+}
+@media screen and (max-width: 768px){
+  .btn-back{
+    position: absolute;
+    left: 50%;
+    background: rgb(75, 3, 158);
+    padding: 15px 18px;
+    text-decoration: none;
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    color: #fff;
+    border-radius: 50%;
+    top: 20px;
+    transform: translateX(-170px);
+  }
+  
 }

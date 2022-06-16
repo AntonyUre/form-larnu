@@ -1,124 +1,114 @@
-*{
+* {
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
-/* body{
-  background: rgb(243, 243, 243);
-} */
-main{
+main {
   background: rgb(255, 255, 255);
   height: 100vh;
-  /* position: relative; */
   display: flex;
 }
-
-.container-btn{
-  width: 330px;
+.container {
+  width: 900px;
   margin: auto;
   display: flex;
   flex-direction: column;
-  /* background: rgb(238, 238, 238); */
-
 }
-.container-btn img{
-border-radius:20px;
-width: 100px;
-margin: auto;
+.container img {
+  border-radius: 20px;
+  width: 100px;
+  margin: auto;
 }
-.container-btn p{
-  /* margin: auto; */
+.container p {
   text-align: center;
-  margin: 20px auto 40px;
+  margin: 20px auto;
   font-family: monospace;
   font-weight: bold;
   font-size: 30px;
 }
-.container-btn .box-btn{
-display: inline;
-display: flex;
-justify-content: space-between;
-}
-.container-btn .box-btn .btn{
-  text-decoration: none;
-  background: rgb(75, 3, 158);
-  color: #fff;
-  padding: 20px 30px;
-  border-radius: 15px;
+
+/* Cards */
+
+.container-card {
+  padding-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 1em;
+  transition: 0.3s;
 }
 
-/* Css Login */
-
-.box-input input, textarea{
-  width: 100%;
-  padding: 18px;
+.container-card .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
   box-sizing: border-box;
-  margin-bottom: 15px;
-  background: rgb(234, 234, 250);
-  border: none;
+  max-width: 500px;
+  height: 300px;
+  background-color: #12086b;
+  transition: 0.5s;
+  position: relative;
   border-radius: 20px;
 }
-.box-input textarea{
-  width: 100%;
-  min-width: 330px;
-  max-width: 330px;
-  min-height: 100px;
-  max-height: 100px;
-  /* box-sizing: border-box; */
-}
-.box-btn .btn-contact{
-  text-decoration: none;
-  background: rgb(75, 3, 158);
-  color: #fff;
-  padding: 20px 43%;
-  border-radius: 15px;
-  width: 100%;
-  box-sizing: border-box;
+
+.container-card .card:hover {
+  transition: 0.5s;
+  transform: scale(1.05);
+  background-color: #222a92;
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
 }
 
-.btn-back{
+.container-card .card a {
+  width: auto;
+}
+
+.container-card .card:hover a {
+  display: block;
+  transition: 0.5s;
+  color: #ffffff;
+}
+
+.container-card .card svg {
+  fill: #2d4588;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.container-card .card:hover svg {
+  transition: 0.5s;
+  fill: #ffffff;
+}
+
+.container-card a {
   position: absolute;
-  left: 50%;
-  background: rgb(75, 3, 158);
-  padding: 15px 18px;
-  text-decoration: none;
-  width: 50px;
-  height: 50px;
-  box-sizing: border-box;
-  color: #fff;
-  border-radius: 50%;
-  top: 100px;
-  transform: translateX(-550px);
-}
-/* Login */
-.box-input label{
-  color: rgb(58, 58, 58);
-  padding-left: 20px;
-}
-.btn-form{
-  text-decoration: none;
-  background: rgb(75, 3, 158);
-  color: #fff;
-  padding: 20px 43%;
-  border-radius: 15px;
   width: 100%;
+  height: 100%;
+  padding-top: 250px;
+  color: rgba(255, 255, 255, 0);
+  text-transform: uppercase;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: 0.5s;
+  margin: 5px 0;
   box-sizing: border-box;
-  border: none;
-}
-@media screen and (max-width: 768px){
-  .btn-back{
-    position: absolute;
-    left: 50%;
-    background: rgb(75, 3, 158);
-    padding: 15px 18px;
-    text-decoration: none;
-    width: 50px;
-    height: 50px;
-    box-sizing: border-box;
-    color: #fff;
-    border-radius: 50%;
-    top: 20px;
-    transform: translateX(-170px);
-  }
   
+}
+
+.container-card a:hover {
+  transition: 0.5s;
+  padding-top: 210px;
+}
+
+@media (max-width: 940px) {
+  .container-card{
+    margin: 0 20px;
+  }
+}
+@media (max-width: 400px) {
+  .container{
+    padding: 20px 0;
+  }
 }
